@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* // List of all available parsing tokens
 -----------------------------------------
 Input   Example             Description
@@ -9,6 +10,7 @@ MMM	    Jan-Dec	            The abbreviated month name
 D	      1-31	              Day of month
 DD	    01-31	              Day of month, 2-digits
 */
+/* eslint-enable */
 
 export function formatDate (format: string, date: Date = new Date()): string {
   // Validate format string for '-' delimiter
@@ -20,7 +22,7 @@ export function formatDate (format: string, date: Date = new Date()): string {
   }
 
   // Define a helper to pad single digit numbers with a leading zero
-  const pad = (n: number) => n < 10 ? `0${n}` : `${n}`
+  const pad = (n: number): string => n < 10 ? `0${n}` : `${n}`
 
   // Abbreviated month names
   const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
