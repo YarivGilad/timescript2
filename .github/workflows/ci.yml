@@ -10,7 +10,7 @@ defaults:
     run:
         shell: bash
         working-directory: ./
-        
+
 # Jobs run in parallel by default
 jobs:
     test:
@@ -25,9 +25,3 @@ jobs:
 
             - name: 'Run tests'
               run: npm test
-
-        
-      
-
-        
-        
